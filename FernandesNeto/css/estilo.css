@@ -413,6 +413,9 @@ textarea{
 }
 
 @media (max-width: 820px){
+    .header{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%);
+    }
     .form-box{
         width: 90%;
     }
@@ -445,7 +448,7 @@ textarea{
     .section__sobre{
         background-image: linear-gradient( to right,
         rgba(255, 255, 255, .9) 0%, 
-        rgba(226, 31, 31, 0.9) 100%),
+        rgba(255, 255, 255, .9) 100%),
             url(../img/teste2.jpg);
   }
     .container__left{
@@ -473,6 +476,7 @@ textarea{
         opacity: 1;
         width: 100%;
     }
+
     .header__menu-icon::before, .header__menu-icon, .header__menu-icon-box .background{
         display: block;
     }
