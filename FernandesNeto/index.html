@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="reset.css"> -->
-    <link rel="stylesheet" href="css/estilo.css" />
+    <title>Escritório Fernandes Neto</title>
+    <meta name="description" content="Escritório de Advocacia especializado em direito do trabalho e ações contra o INSS." />
+    <meta name="keywords" content="Direito do Trabalho, Ação contra INSS, Rescisão Indireta, Aposentadoria por invalidez, Advogado Online"/>
+    <meta name="robots" content="index, follow"> 
     <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/estilo.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
       rel="stylesheet"
@@ -22,7 +24,25 @@
 
   <body>
       <a href="https://api.whatsapp.com/send?L=pt&amp;phone=5521996924687"><img src="img/whatsapp.ico" style="position: fixed; bottom: 25px; right: 15px; z-index: 100;" data-selector="img" alt=""></a>
-    <header class="header">
+      
+     <div class="header__menu-icon-box">
+       <input type="checkbox" id="checkbox">
+       <label for="checkbox"><i class="fas fa-bars header__menu-icon"></i></label>
+
+       <div class="background"></div>
+
+       <nav class="header__menu-icon-nav">
+          <ul class="header__menu-ul">
+              <li><a href="#">Início</a></li>
+              <li><a href="#areas">Áreas de atuação</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <!-- <li><a href="#">Depoimentos</a></li> -->
+              <li class="header__menu-contato"><a href="#contato">Contato</a></li>
+          </ul>
+      </nav>
+     </div>
+
+      <header class="header">
     <img src="img/Logo transparente.png" alt="logo" class="header__logo" />
       <div class="container">
         <div class="header__top">
@@ -31,7 +51,7 @@
                     <i class="fas fa-phone"></i> 21 99692-4687
                 </div>
                 <div class="header__contato-email">
-                    <i class="fas fa-envelope"></i> fernandesneto.br@gmail.com
+                    <i class="fas fa-whatsapp-sqaure"></i> fernandesneto.br@gmail.com
                 </div>
                 <div class="header__contato-redessociais">
                     <i class="fab fa-facebook-square"></i>
@@ -39,14 +59,14 @@
                 </div>
                 </div>
               
-              
+               
                 <nav class="header__menu">
                     <ul class="header__menu-ul">
                         <li><a href="#">Início</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Áreas de atuação</a></li>
-                        <li><a href="#">Depoimentos</a></li>
-                        <li class="header__menu-contato"><a href="#">Contato</a></li>
+                        <li><a href="#areas">Áreas de atuação</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <!-- <li><a href="#">Depoimentos</a></li> -->
+                        <li class="header__menu-contato"><a href="#contato">Contato</a></li>
                     </ul>
                 </nav>
         </div>
@@ -59,7 +79,7 @@
       </div>
     </header>
 
-    <div class="form-box">
+    <div class="form-box" id="contato">
       <form action="" class="form">
           <h2>Entre em contato</h2>
         <div class="inputs-box">
@@ -73,14 +93,14 @@
 
     <section class="section__areas">
       <div class="container">
-        <h2>Áreas de Atuação</h2>
+        <h2 id="areas">Áreas de Atuação</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
           obcaecati expedita cumque amet placeat saepe sunt corporis ea quam
           maiores laboriosam accusantium animi, et explicabo reprehenderit ipsum
         </p>
 
-        <div class="row">
+        <div class="row" >
           <div class="col-1-of-3">
             <div class="card">
               <i class="fas fa-briefcase fa-2x"></i>
@@ -117,7 +137,7 @@
         </div>
       </div>
     </section>
-      <section class="section__sobre">
+      <section class="section__sobre" id="sobre">
           <div class="container__left">
                 <h2>O escritório</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde tenetur impedit maxime temporibus, dolorum laudantium fugit nisi nostrum recusandae corrupti id quod. Molestiae officiis repellat hic iste nam placeat quo.</p>
@@ -143,6 +163,9 @@
                     <i class="fab fa-twitter-square"></i>
                 </div>
                 </div>
+
+                <p class="criado">Criado por <a href="http://www.braumsolutions.com">Braum Solutions - Design e Desenvolvimento</a></p>
+                
       </footer>
   </body>
 </html>
