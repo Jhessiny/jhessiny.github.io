@@ -445,7 +445,7 @@ textarea{
     .section__sobre{
         background-image: linear-gradient( to right,
         rgba(255, 255, 255, .9) 0%, 
-        rgba(255, 255, 255, .9) 100%),
+        rgba(226, 31, 31, 0.9) 100%),
             url(../img/teste2.jpg);
   }
     .container__left{
