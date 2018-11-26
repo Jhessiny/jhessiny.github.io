@@ -456,6 +456,12 @@ textarea{
     .row .col-1-of-3 {
         width: 90%;
     }
+    .header__centro h1{
+        margin-bottom: 2rem;
+    }
+    .header__centro p{
+        display: none;
+    }
 }
 
 @media (max-width: 640px){
@@ -467,7 +473,6 @@ textarea{
         opacity: 1;
         width: 100%;
     }
-
     .header__menu-icon::before, .header__menu-icon, .header__menu-icon-box .background{
         display: block;
     }
