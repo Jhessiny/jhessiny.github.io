@@ -282,9 +282,7 @@ textarea{
     padding: 2.5rem;
     text-align: center;
     border-radius: 3px;
-    /* width: 90%; */
     margin: 0 auto;
-    /* box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); */
     border: 1px solid #ddd;
     transition: all .3s; 
     line-height: 2.5rem;
