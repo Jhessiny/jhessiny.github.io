@@ -28,6 +28,7 @@ body{
     transform: translate(-50%, -50%);
     z-index: 2500;
     color: #777;
+    text-align: center;
 
     opacity: 0;
     width: 0;
@@ -42,10 +43,18 @@ body{
         color: #777;
         text-decoration: none;
         text-transform: uppercase;
+        border: 2px solid transparent;
 }
 
 .header__menu-icon-box .header__menu-icon-nav li{
     display: block;
+    margin: 2.5rem;
+}
+
+.header__menu-icon-box .header__menu-icon-nav .header__menu-icon-contato a{
+    color: #eee;
+    background-color: #F46036;
+    /* width: 20rem; */
 }
 
 .header__menu-icon::before, .header__menu-icon{
@@ -82,6 +91,7 @@ body{
 #checkbox:checked ~ .background{
     transform: scale(100);
 }
+
 
 /* fim - menu mobile */
 
