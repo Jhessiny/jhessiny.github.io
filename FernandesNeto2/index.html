@@ -23,7 +23,7 @@
   </head>
 
   <body>
-      <?php
+      <!-- <?php
       if(isset($_POST["nome"]) && !empty($_POST['nome'])){
         $nome = addslashes($_POST['nome']);
         $email = addslashes($_POST['email']);
@@ -43,7 +43,7 @@
         $resposta = "<p style= 'color: red; clear= both'>Erro. Tente novamente</p>";
       }
   
-  ?>
+  ?> -->
 
       <a href="https://api.whatsapp.com/send?L=pt&amp;phone=5521996924687"><img src="img/whatsapp.ico" style="position: fixed; bottom: 25px; right: 15px; z-index: 100;" data-selector="img" alt=""></a>
       
@@ -109,11 +109,11 @@
             <input type="email" name="email" placeholder="Email">
         </div>
         <textarea name="mensagem" id="" cols="30" rows="5" placeholder="Sua mensagem"></textarea>
-        <?php
+        <!-- <?php
         if(isset($_POST["nome"]) && !empty($_POST['nome'])){
           echo $resposta;
         }
-          ?>
+          ?> -->
         <button type="submit" class="header__center-contato">Entre em contato</button>
       </form>
     </div>
