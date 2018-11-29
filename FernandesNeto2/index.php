@@ -40,7 +40,7 @@
         $resposta = "<p style= 'color: green; clear= both'> Email enviado com sucesso!</p>";
   
       } else{
-        $resposta = "<p style= 'color: red; clear= both'>Erro. Tente novamente</p>"
+        $resposta = "<p style= 'color: red; clear= both'>Erro. Tente novamente</p>";
       }
   
   ?>
@@ -56,12 +56,13 @@
        <nav class="header__menu-icon-nav">
             <ul class="header__menu-ul">
                 <li><a href="#" onclick="fechar()">Início</a></li>
-                <li><a href="#areas">Áreas de atuação</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li class="header__menu-icon-contato"><a href="#contato">Contato</a></li>
+                <li><a href="#areas" onclick="fechar()">Áreas de atuação</a></li>
+                <li><a href="#sobre" onclick="fechar()">Sobre</a></li>
+                <li class="header__menu-icon-contato"><a href="#contato" onclick="fechar()">Contato</a></li>
             </ul>
       </nav>
      </div>
+     
 
       <header class="header">
     <img src="img/Logo transparente.png" alt="logo" class="header__logo" />
@@ -192,7 +193,6 @@
 
                 <p class="criado">Criado por <a href="http://www.braumsolutions.com">Braum Solutions - Design e Desenvolvimento</a></p> 
       </footer>
-
       <script>
         function fechar(){
           document.getElementById("checkbox").checked = 0;
