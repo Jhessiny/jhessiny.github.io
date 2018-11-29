@@ -23,6 +23,28 @@
   </head>
 
   <body>
+      <?php
+      if(isset($_POST["nome"]) && !empty($_POST['nome'])){
+        $nome = addslashes($_POST['nome']);
+        $email = addslashes($_POST['email']);
+        $mensagem = addslashes($_POST['mensagem']);
+  
+        $para = "fernandesneto.br@gmail.com";
+        $assunto = "Email - Site FernandesNeto";
+        $corpo = "Nome: ".$nome." - Email: ". $email. " - Mensagem: ".$mensagem;
+        $cabecalho = "From: braumsolutions@braumsolutions.com"."\r\n".
+                      "Reply-To: ".$email."\r\n".
+                      "X-Mailer: PHP/".phpversion();
+  
+        mail($para, $assunto, $corpo, $cabecalho);
+        $resposta = "<p style= 'color: green; clear= both'> Email enviado com sucesso!</p>";
+  
+      } else{
+        $resposta = "<p style= 'color: red; clear= both'>Erro. Tente novamente</p>"
+      }
+  
+  ?>
+
       <a href="https://api.whatsapp.com/send?L=pt&amp;phone=5521996924687"><img src="img/whatsapp.ico" style="position: fixed; bottom: 25px; right: 15px; z-index: 100;" data-selector="img" alt=""></a>
       
      <div class="header__menu-icon-box">
@@ -32,13 +54,12 @@
        <div class="background"></div>
 
        <nav class="header__menu-icon-nav">
-          <ul class="header__menu-ul">
-              <li><a href="#">Início</a></li>
-              <li><a href="#areas">Áreas de atuação</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <!-- <li><a href="#">Depoimentos</a></li> -->
-              <li class="header__menu-icon-contato"><a href="#contato">Contato</a></li>
-          </ul>
+            <ul class="header__menu-ul">
+                <li><a href="#" onclick="fechar()">Início</a></li>
+                <li><a href="#areas">Áreas de atuação</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li class="header__menu-icon-contato"><a href="#contato">Contato</a></li>
+            </ul>
       </nav>
      </div>
 
@@ -79,14 +100,19 @@
       </div>
     </header>
 
-    <div class="form-box" id="contato">
-      <form action="" class="form">
+    <div class="form-box">
+      <form action="" class="form" method="POST">
           <h2>Entre em contato</h2>
         <div class="inputs-box">
-            <input type="text" placeholder="Nome">
-            <input type="email" placeholder="Email">
+            <input type="text" name="nome" placeholder="Nome">
+            <input type="email" name="email" placeholder="Email">
         </div>
         <textarea name="mensagem" id="" cols="30" rows="5" placeholder="Sua mensagem"></textarea>
+        <?php
+        if(isset($_POST["nome"]) && !empty($_POST['nome'])){
+          echo $resposta;
+        }
+          ?>
         <button type="submit" class="header__center-contato">Entre em contato</button>
       </form>
     </div>
@@ -166,5 +192,11 @@
 
                 <p class="criado">Criado por <a href="http://www.braumsolutions.com">Braum Solutions - Design e Desenvolvimento</a></p> 
       </footer>
+
+      <script>
+        function fechar(){
+          document.getElementById("checkbox").checked = 0;
+        }
+      </script>
   </body>
 </html>
