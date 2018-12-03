@@ -34,18 +34,19 @@ body {
   position: fixed;
   top: 5rem;
   right: 0;
+  min-height: 30rem;
  }
 
  .navigation__checkbox:checked ~ .nav__ul li {
   display: block;
   text-align: center;
-  padding: 0;
+  padding: 1rem 0;
  }
 
  .navigation__checkbox:checked ~ .nav__ul li a{
   width: 5rem;
-  padding: 2.2rem 5rem;
-  font-size: 1.6rem;
+  padding: 3.5rem 5rem;
+  font-size: 1.7rem;
  }
 
 /* FIm menu mobile */
