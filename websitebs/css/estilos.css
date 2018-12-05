@@ -576,7 +576,7 @@ body {
   line-height: 1;
 }
 .popup__close:hover {
-  color: #55c57a;
+  color: rgba(63, 70, 153, 0.9);
 }
 
 .form h2{
@@ -683,10 +683,6 @@ body {
   opacity: 1;
 }
 
-/* .form__group-check{
-  width: 20rem;
-} */
-
 form h3{
   font-size: 1.6rem;
   margin: 3rem 0 2rem 0;
@@ -704,7 +700,7 @@ form h3{
 }
 
 textarea{
-  margin: 2rem 0 3rem 1rem;
+  margin: 2rem 0 3rem 0;
   width: 100%;
   height: 10rem;
   border: none;
@@ -712,8 +708,6 @@ textarea{
   resize: none;
   border: .05rem solid #ddd;
 }
-
-
 
 @media (max-width: 900px) {
   html {
@@ -807,6 +801,15 @@ textarea{
   .col-1-of-3:last-child {
     margin-left: 0;
   }
+  .popup__content{
+    width: 90%;
+    padding: 3rem;
+  }
+  .form__group-info{
+    display: inline-block;
+    width: 100%;
+  }
+
 }
 
 @media (max-width: 31.25rem) {
