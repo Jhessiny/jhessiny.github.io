@@ -16,9 +16,18 @@
     />
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/estilos.css" />
-    <title>Document</title>
+    <link rel="shortcut icon" type="image/png" href="img/BRAUM-branco.png" />
+    <title>Braum Solutions</title>
   </head>
   <body>
+    <a href="https://api.whatsapp.com/send?L=pt&amp;phone=5521996924687"
+      ><img
+        src="img/whatsapp.ico"
+        style="position: fixed; bottom: 25px; right: 15px; z-index: 100;"
+        data-selector="img"
+        alt="whatsapp-icone"
+    /></a>
+
     <div class="header__barra">
       <div class="container">
         <div class="header__barra-logo">
@@ -27,17 +36,25 @@
         </div>
 
         <div class="header__barra-nav">
-            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-            <label for="navi-toggle" class="navigation__button">
-              <i class="fas fa-bars"></i>
-            </label>
+          <input
+            type="checkbox"
+            class="navigation__checkbox"
+            id="navi-toggle"
+          />
+          <label for="navi-toggle" class="navigation__button">
+            <i class="fas fa-bars"></i>
+          </label>
 
           <ul class="nav__ul">
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Pacotes</a></li>
-            <li><a class="link-contato" href="#">Contato</a></li>
+            <li><a href="#" onclick="fechar()">Início</a></li>
+            <li><a href="#about" onclick="fechar()">Sobre</a></li>
+            <li><a href="#servicos" onclick="fechar()">Serviços</a></li>
+            <li><a href="#pacotes" onclick="fechar()">Pacotes</a></li>
+            <li>
+              <a class="link-contato" href="#popup" onclick="fechar()"
+                >Contato</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -49,8 +66,7 @@
           <div class="header__center">
             <h1>Design</h1>
             <p>
-              Lorem ipsum dolor sit amet exercitationem enim voluptates et
-              rerum, quae doloribus sit amet exercitationem.
+              Criamos logomarcas e layouts com as melhores ferramentas disponíveis no mercado e profissionais especializados.
             </p>
           </div>
 
@@ -63,8 +79,7 @@
           <div class="header__center">
             <h1>Desenvolvimento</h1>
             <p>
-              Lorem ipsum dolor sit amet exercitationem enim voluptates et
-              rerum, quae doloribus sit amet exercitationem.
+              Desenvolvemos sites institucionais, landing pages, lojas-virtuais, aplicativos para dispositivos móveis e muito mais!
             </p>
           </div>
 
@@ -77,8 +92,7 @@
           <div class="header__center">
             <h1>SEO</h1>
             <p>
-              Lorem ipsum dolor sit amet exercitationem enim voluptates et
-              rerum, quae doloribus sit amet exercitationem.
+              Com profissionais especializados nos critérios aplicados pelo Google, seu site ficará bem ranqueado.
             </p>
           </div>
 
@@ -92,25 +106,19 @@
       </div>
     </header>
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="left">
           <h2>Sobre Nós</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            esse perferendis libero reiciendis, culpa doloribus est maxime,
-            autem voluptates pariatur officiis accusamus voluptatem saepe.
-            Asperiores nostrum magni iste enim iure. sit amet consectetur
-            adipisicing elit. Obcaecati esse perferendis libero reiciendis,
-            culpa doloribus est maxime, autem voluptates pariatur officiis
-            accusamus voluptatem saepe.
+            A Braum Solutions é uma agência digital focada no Design e Desenvolvimento de sites e aplicativos móveis e em Marketing Digital. Sempre atenta às novidades do mercado, está em constante pesquisa buscando o que há de melhor em tecnologia para manter seus produtos entre os melhores do mercado. Busca, acima de tudo, levar o seu negócio à um novo patamar.
           </p>
         </div>
         <div class="right"><img src="img/sobre.jpg" alt="" /></div>
       </div>
     </section>
 
-    <section class="servicos">
+    <section class="servicos" id="servicos">
       <h2>Serviços</h2>
       <div class="row">
         <div class="col-1-of-4">
@@ -330,6 +338,202 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+            <a href="#section-tours" class="popup__close">&times;</a>
+          <form action="#" class="form">
+            <div class="u-margin-bottom-medium">
+              <h2 class="heading-secondary">Entre em contato</h2>
+            </div>
+            <div class="form__group-info">
+              <input
+                class="form__input"
+                id="name"
+                placeholder="Nome"
+                required
+                type="text"
+              />
+              <label class="form__label" for="name">Nome</label>
+            </div>
+            <div class="form__group-info">
+              <input
+                class="form__input"
+                id="email"
+                placeholder="E-mail"
+                required
+                type="email"
+              />
+              <label class="form__label" for="email">E-mail</label>
+            </div>
+            <div class="form__group-info">
+              <input
+                class="form__input"
+                id="telefone"
+                placeholder="Telefone"
+                required
+                type="tel"
+              />
+              <label class="form__label" for="email">Telefone</label>
+            </div>
+            <div class="form__group-info">
+              <input
+                class="form__input"
+                id="telefone"
+                placeholder="Segmento da empresa"
+                required
+                type="tel"
+              />
+              <label class="form__label" for="email">Segmento da empresa</label>
+            </div>
+
+            <!--
+              <div class="form__group u-margin-bottom-medium">
+                <div class="form__radio-group">
+                  <input
+                    type="radio"
+                    name="size"
+                    class="form__radio-input"
+                    id="small"
+                  />
+                  <label for="small" class="form__radio-label">
+                    <span class="form__radio-button"></span> Small tour
+                    group</label
+                  >
+                </div>
+
+                <div class="form__radio-group">
+                  <input
+                    type="radio"
+                    name="size"
+                    class="form__radio-input"
+                    id="large"
+                  />
+                  <label for="large" class="form__radio-label">
+                    <span class="form__radio-button"></span> Large tour
+                    group</label
+                  >
+                </div>
+                <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      name="size"
+                      class="form__radio-input"
+                      id="outro"
+                    />
+                    <label for="outro" class="form__radio-label">
+                      <span class="form__radio-button"></span> Outro</label
+                    >
+                  </div>
+              </div>
+            -->
+            <div class="form__group-check">
+              <h3>O que podemos desenvolver para você?</h3>
+              <ul>
+                <li>
+                  <input
+                    class="form__input"
+                    id="telefone"
+                    placeholder="Telefone"
+                    required
+                    type="checkbox"
+                  />
+                  <label class="form_label-check" for="email">Website</label>
+                </li>
+                <li>
+                  <input
+                    class="form__input"
+                    id="telefone"
+                    placeholder="Telefone"
+                    required
+                    type="checkbox"
+                  />
+                  <label class="form_label-check" for="email"
+                    >Sistema web</label
+                  >
+                </li>
+                <li>
+                  <input
+                    class="form__input"
+                    id="telefone"
+                    placeholder="Telefone"
+                    required
+                    type="checkbox"
+                  />
+                  <label class="form_label-check" for="email"
+                    >Loja Virtual</label
+                  >
+                </li>
+                <li>
+                  <input
+                    class="form__input"
+                    id="telefone"
+                    placeholder="Telefone"
+                    required
+                    type="checkbox"
+                  />
+                  <label class="form_label-check" for="email"
+                    >Landing Page</label
+                  >
+                </li>
+                <li>
+                  <input
+                    class="form__input"
+                    id="telefone"
+                    placeholder="Telefone"
+                    required
+                    type="checkbox"
+                  />
+                  <label class="form_label-check" for="email">Blog</label>
+                </li>
+                <li>
+                  <input
+                    class="form__input"
+                    id="telefone"
+                    placeholder="Telefone"
+                    required
+                    type="checkbox"
+                  />
+                  <label class="form_label-check" for="email"
+                    >Aplicativo móvel</label
+                  >
+                </li>
+                <li>
+                  <input
+                    class="form__input"
+                    id="telefone"
+                    placeholder="Telefone"
+                    required
+                    type="checkbox"
+                  />
+                  <label class="form_label-check" for="email"
+                    >Otimização de sites</label
+                  >
+                </li>
+                <li>
+                  <input
+                    class="form__input"
+                    id="telefone"
+                    placeholder="Telefone"
+                    required
+                    type="checkbox"
+                  />
+                  <label class="form_label-check" for="email"
+                    >Marketing de conteudo</label
+                  >
+                </li>
+              </ul>
+            </div>
+
+         <h3>Quais são os detalhes do seu projeto? *</h3>      
+            <textarea name="" id=""  ></textarea>
+            <div class="form__group">
+              <button class="btn btn--green">Next step &rarr;</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <script>
       var slideIndex = 0;
       showSlides();
@@ -351,6 +555,10 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
         setTimeout(showSlides, 3500); // Change image every 2 seconds
+      }
+
+      function fechar() {
+        document.getElementById("navi-toggle").checked = 0;
       }
     </script>
   </body>
