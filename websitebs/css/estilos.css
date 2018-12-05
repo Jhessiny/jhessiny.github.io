@@ -772,7 +772,7 @@ textarea{
   }
   .header__center {
     top: 60%;
-    width: 70%;
+    width: 75%;
   }
   .footer__nav li {
     padding: 0.5rem;
@@ -794,6 +794,9 @@ textarea{
 @media (max-width: 600px) {
   html {
     font-size: 50%;
+  }
+  .header__center {
+    width: 85%;
   }
   .servicos {
     padding: 6rem 2rem;
@@ -818,6 +821,10 @@ textarea{
   }
   .header__barra-nav .fas {
     right: 2rem;
+  }
+  .header__center {
+    width: 90%;
+    font-size: 1.8rem;
   }
   .servicos {
     padding: 6rem 4rem;
