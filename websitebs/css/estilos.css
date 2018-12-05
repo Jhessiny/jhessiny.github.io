@@ -140,11 +140,13 @@ body {
 .header__center {
   width: 45%;
   position: absolute;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
   font-size: 2rem;
   height: 10rem;
   color: #eee;
+  font-weight: 300;
+  line-height: 2.5rem;
 }
 
 .header__center h1 {
@@ -273,10 +275,10 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  min-height: 53rem;
+  min-height: 57rem;
 }
 .card__side {
-  min-height: 53rem;
+  min-height: 57rem;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
@@ -521,10 +523,11 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  overflow-y: auto;
 }
 .popup__content {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 75%;
@@ -533,32 +536,13 @@ body {
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   display: table;
-  overflow: hidden;
+  /* overflow-y: auto; */
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.25);
   transition: all 0.5s 0.2s;
   padding: 3rem 6rem;
 }
 
-.popup__img {
-  display: block;
-  width: 100%;
-  height: 19%;
-}
-.popup__text {
-  font-size: 1.4rem;
-  margin-bottom: 4rem;
-  -moz-column-count: 2;
-  -moz-column-gap: 4rem;
-  -moz-column-rule: 1px solid #eee;
-  column-count: 2;
-  column-gap: 4rem;
-  column-rule: 1px solid #eee;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-}
 .popup:target {
   opacity: 1;
   visibility: visible;
@@ -595,6 +579,7 @@ body {
   display: inline-block;
   width: 47%;
   margin-right: 2%;
+  height: 4rem;;
 }
 
 .form__input[type=text], 
@@ -633,7 +618,7 @@ body {
   margin-top: 0.7rem;
   display: block;
   transition: all 0.3s;
-  transform: translateY(-6.5rem);
+  transform: translateY(-7rem);
 }
 
 .form__input:placeholder-shown + .form__label {
@@ -689,7 +674,7 @@ body {
 
 form h3{
   font-size: 1.6rem;
-  margin: 3rem 0 2rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 .form__group-check ul{
@@ -829,12 +814,13 @@ textarea{
   .header__center {
     width: 90%;
     font-size: 1.8rem;
+    top: 70%;
   }
   .servicos {
     padding: 6rem 4rem;
   }
   .right img {
-    margin-top: -12rem;
+    margin-top: -10rem;
     min-height: 30rem;
   }
   .left {
