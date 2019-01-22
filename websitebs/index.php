@@ -14,12 +14,40 @@
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/grid.css" />
-    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/grid.minified.css" />
+    <link rel="stylesheet" href="css/estilos.minified.css" />
     <link rel="shortcut icon" type="image/png" href="img/BRAUM-branco.png" />
     <title>Braum Solutions</title>
   </head>
   <body>
+      <?php
+      if(isset($_POST["nome"]) && !empty($_POST['nome'])){
+        $nome = addslashes($_POST['nome']);
+        $email = addslashes($_POST['email']);
+        $tel = addslashes($_POST['tel']);
+        $pedidos = addslashes($_POST['pedidos']);
+        $detalhes = addslashes($_POST['detalhes']);
+  
+        $para = "braumsolutions@gmail.com";
+        $assunto = "Contato - Braum Solutions";
+        $corpo = "Nome: ".$nome.."\r\n"
+        "Email: ". $email. ."\r\n"
+        "Pedidos: ".$pedidos. ."\r\n"
+        "Detalhes: ".$detalhes;
+        $cabecalho = "From: braumsolutions@braumsolutions.com"."\r\n".
+                      "Reply-To: ".$email."\r\n".
+                      "X-Mailer: PHP/".phpversion();
+  
+        mail($para, $assunto, $corpo, $cabecalho);
+        $resposta = "<p style= 'color: green; clear= both'> Email enviado com sucesso!</p>";
+  
+      } else{
+        $resposta = "<p style= 'color: red; clear= both'>Erro. Tente novamente</p>";
+      }
+  
+  ?>
+
+
     <a href="https://api.whatsapp.com/send?L=pt&amp;phone=5521996924687"
       ><img
         src="img/whatsapp.ico"
@@ -120,7 +148,7 @@
 
     <section class="servicos" id="servicos">
       <h2>Serviços</h2>
-      <div class="row">
+      <div class="row" id="row-cards">
         <div class="col-1-of-4">
           <div class="servicos__card">
             <i class="fas fa-pen-fancy fa-3x"></i>
@@ -147,7 +175,7 @@
             <i class="fas fa-search fa-3x"></i>
             <h3>Seo</h3>
             <p class="servicos__card__text">
-              Seja encontrado e ganhe uma posição privilegiada otimizando os mecanismos de busca conforme os critérios da Google.
+              Seja encontrado e ganhe uma posição privilegiada otimizando os motores de busca conforme os critérios da Google.
             </p>
           </div>
         </div>
@@ -186,6 +214,7 @@
                     <li>Gerenciador de conteúdo</li>
                     <li>Formulário para Contato</li>
                     <li>Botão para whatsapp</li>
+                    <li>Email profissional</li>
                   </ul>
                 </div>
               </div>
@@ -196,7 +225,7 @@
                     <p class="card__price-only">Apenas</p>
                     <p class="card__price-value">R$499,00</p>
                   </div>
-                  <a href="#popup" class="btn btn--white">Peça agora!</a>
+                  <a href="#popup2" class="btn btn--white">Peça agora!</a>
                 </div>
               </div>
             </div>
@@ -219,6 +248,7 @@
                     <li>Gerenciador de conteúdo</li>
                     <li>Formulário para Contato</li>
                     <li>Botão para whatsapp</li>
+                    <li>Email profissional</li>
                     <li>Blog interno</li>
                   </ul>
                 </div>
@@ -230,7 +260,7 @@
                     <p class="card__price-only">Apenas</p>
                     <p class="card__price-value">R$798,00</p>
                   </div>
-                  <a href="#popup" class="btn btn--white">Peça agora!</a>
+                  <a href="#popup2" class="btn btn--white">Peça agora!</a>
                 </div>
               </div>
             </div>
@@ -247,12 +277,13 @@
                 </h4>
                 <div class="card__details">
                   <ul>
-                    <li>Layout Padrão</li>
+                    <li>Layout Personalizado</li>
                     <li>Até 12 páginas</li>
                     <li>Design Responsivo</li>
                     <li>Gerenciador de conteúdo</li>
                     <li>Formulário para Contato</li>
                     <li>Botão para whatsapp</li>
+                    <li>Email profissional</li>
                     <li>Blog Interno</li>
                     <li>Otimização SEO</li>
                   </ul>
@@ -265,7 +296,7 @@
                     <p class="card__price-only">Apenas</p>
                     <p class="card__price-value">R$998,00</p>
                   </div>
-                  <a href="#popup" class="btn btn--white">Peça agora!</a>
+                  <a href="#popup2" class="btn btn--white">Peça agora!</a>
                 </div>
               </div>
             </div>
@@ -273,7 +304,7 @@
         </div>
         <div class="u-center-text u-margin-top-huge">
           Não encontrou um pacote que atenda ao seu negócio?
-          <a href="#">Entre em contato e peça um pacote personalizado.</a>
+          <a class="btn btn--blue" href="#">Entre em contato e peça um pacote personalizado.</a>
         </div>
       </div>
     </section>
@@ -313,21 +344,22 @@
         <div class="container">
           <ul>
             <li>
-              <a href="#"><i class="fab fa-facebook-square"></i></a>
+              <a href="https://www.facebook.com/braumsolutions"><i class="fab fa-facebook-square"></i></a>
             </li>
             <li>
               <a href="#"><i class="fab fa-github-square"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-twitter-square"></i></a>
+              <a href="https://twitter.com/BraumSolutions"><i class="fab fa-twitter-square"></i></a>
             </li>
             <li>
               <a href="#"><i class="fab fa-pinterest-square"></i></a>
             </li>
           </ul>
           <h4>BRAUM SOLUTIONS</h4>
+          <p>CNPJ: 32.113.950/0001-19</p>
           <p>Copyright &copy; Braum Solutions</p>
-          Todos os direitos reservados;
+          <p>Todos os direitos reservados;</p>
         </div>
       </div>
     </footer>
@@ -335,19 +367,20 @@
     <div class="popup" id="popup">
       <div class="popup__content">
             <a href="#section-tours" class="popup__close">&times;</a>
-          <form action="#" class="form">
+          <form action="#" class="form" method="POST">
             <div class="u-margin-bottom-medium">
               <h2 class="heading-secondary">Entre em contato</h2>
             </div>
             <div class="form__group-info">
               <input
                 class="form__input"
-                id="name"
+                id="nome"
                 placeholder="Nome"
                 required
                 type="text"
+                name="nome"
               />
-              <label class="form__label" for="name">Nome</label>
+              <label class="form__label" for="nome">Nome</label>
             </div>
             <div class="form__group-info">
               <input
@@ -356,6 +389,7 @@
                 placeholder="E-mail"
                 required
                 type="email"
+                name="email"
               />
               <label class="form__label" for="email">E-mail</label>
             </div>
@@ -366,69 +400,31 @@
                 placeholder="Telefone"
                 required
                 type="tel"
+                name="tel"
               />
               <label class="form__label" for="email">Telefone</label>
             </div>
             <div class="form__group-info">
               <input
                 class="form__input"
-                id="telefone"
+                id="segmento"
                 placeholder="Segmento da empresa"
-                required
-                type="tel"
+                type="text"
+                name="segmento"
               />
-              <label class="form__label" for="email">Segmento da empresa</label>
+              <label class="form__label" for="segmento">Segmento da empresa</label>
             </div>
 
-            <!--
-              <div class="form__group u-margin-bottom-medium">
-                <div class="form__radio-group">
-                  <input
-                    type="radio"
-                    name="size"
-                    class="form__radio-input"
-                    id="small"
-                  />
-                  <label for="small" class="form__radio-label">
-                    <span class="form__radio-button"></span> Small tour
-                    group</label
-                  >
-                </div>
-
-                <div class="form__radio-group">
-                  <input
-                    type="radio"
-                    name="size"
-                    class="form__radio-input"
-                    id="large"
-                  />
-                  <label for="large" class="form__radio-label">
-                    <span class="form__radio-button"></span> Large tour
-                    group</label
-                  >
-                </div>
-                <div class="form__radio-group">
-                    <input
-                      type="radio"
-                      name="size"
-                      class="form__radio-input"
-                      id="outro"
-                    />
-                    <label for="outro" class="form__radio-label">
-                      <span class="form__radio-button"></span> Outro</label
-                    >
-                  </div>
-              </div>
-            -->
-            <div class="form__group-check">
+            <div class="form__group">
+                <div class="form__group-check">
               <h3>O que podemos desenvolver para você?</h3>
               <ul>
                 <li>
                   <input
                     class="form__input"
-                    id="telefone"
-                    placeholder="Telefone"
-                    required
+                    name="pedidos[]"
+                    value="website"
+                    id="website"
                     type="checkbox"
                   />
                   <label class="form_label-check" for="email">Website</label>
@@ -436,82 +432,82 @@
                 <li>
                   <input
                     class="form__input"
-                    id="telefone"
-                    placeholder="Telefone"
-                    required
+                    name="pedidos[]"
+                    value="sistema"
+                    id="sistema"
                     type="checkbox"
                   />
-                  <label class="form_label-check" for="email"
+                  <label class="form_label-check" for="sistema"
                     >Sistema web</label
                   >
                 </li>
                 <li>
                   <input
                     class="form__input"
-                    id="telefone"
-                    placeholder="Telefone"
-                    required
+                    name="pedidos[]"
+                    value="loja"
+                    id="loja"
                     type="checkbox"
                   />
-                  <label class="form_label-check" for="email"
+                  <label class="form_label-check" for="loja"
                     >Loja Virtual</label
                   >
                 </li>
                 <li>
                   <input
                     class="form__input"
-                    id="telefone"
-                    placeholder="Telefone"
-                    required
+                    name="pedidos[]"
+                    value="landing"
+                    id="landing"
                     type="checkbox"
                   />
-                  <label class="form_label-check" for="email"
+                  <label class="form_label-check" for="landing"
                     >Landing Page</label
                   >
                 </li>
                 <li>
                   <input
                     class="form__input"
-                    id="telefone"
-                    placeholder="Telefone"
-                    required
+                    name="pedidos[]"
+                    value="blog"
+                    id="blog"
                     type="checkbox"
                   />
-                  <label class="form_label-check" for="email">Blog</label>
+                  <label class="form_label-check" for="blog">Blog</label>
                 </li>
                 <li>
                   <input
                     class="form__input"
-                    id="telefone"
-                    placeholder="Telefone"
-                    required
+                    name="pedidos[]"
+                    value="app"
+                    id="app"
                     type="checkbox"
                   />
-                  <label class="form_label-check" for="email"
+                  <label class="form_label-check" for="app"
                     >Aplicativo móvel</label
                   >
                 </li>
                 <li>
                   <input
                     class="form__input"
-                    id="telefone"
-                    placeholder="Telefone"
-                    required
+                    name="pedidos[]"
+                    value="seo"
+                    id="seo"
                     type="checkbox"
                   />
-                  <label class="form_label-check" for="email"
+                  <label class="form_label-check" for="seo"
                     >Otimização de sites</label
                   >
                 </li>
                 <li>
                   <input
                     class="form__input"
-                    id="telefone"
-                    placeholder="Telefone"
-                    required
+                    name="pedidos[]"
+                    value="marketing"
+                    id="marketing"
                     type="checkbox"
                   />
-                  <label class="form_label-check" for="email"
+                  <label class="form_label-check" for="marketing"
                     >Marketing de conteudo</label
                   >
                 </li>
@@ -519,14 +515,69 @@
             </div>
 
          <h3>Quais são os detalhes do seu projeto? *</h3>      
-            <textarea name="" id=""  ></textarea>
+            <textarea name="detalhes" id="detalhes"  ></textarea>
             <div class="form__group">
-              <button class="btn btn--green">Next step &rarr;</button>
+              <button class="btn btn--green">Enviar &rarr;</button>
             </div>
           </form>
         </div>
       </div>
     </div>
+
+    <div class="popup popup2" id="popup2">
+      <div class="popup__content popup__content-2">
+            <a href="#section-tours" class="popup__close">&times;</a>
+            <form action="#" class="form" method="POST">
+              <div class="u-margin-bottom-medium">
+                <h2 class="heading-secondary">Entre em contato</h2>
+              </div>
+              <div class="form__group-info">
+                <input
+                  class="form__input"
+                  id="name"
+                  placeholder="Nome"
+                  required
+                  type="text"
+                  name="nome"
+                />
+                <label class="form__label" for="name">Nome</label>
+              </div>
+              <div class="form__group-info">
+                <input
+                  class="form__input"
+                  id="email"
+                  placeholder="E-mail"
+                  required
+                  type="email"
+                  name="email"
+                />
+                <label class="form__label" for="email">E-mail</label>
+              </div>
+              <div class="form__group-info">
+                <input
+                  class="form__input"
+                  id="telefone"
+                  placeholder="Telefone"
+                  required
+                  type="tel"
+                  name="tel"
+                />
+                <label class="form__label" for="email">Telefone</label>
+              </div>
+              <div class="form__group-info">
+                <input
+                  class="form__input"
+                  id="telefone"
+                  placeholder="Segmento da empresa"
+                  type="text"
+                  name="segmento"
+                />
+                <label class="form__label" for="email">Segmento da empresa</label>
+              </div>
+              <h3>Plano: </h3>
+              <h3>Valor: </h3>
+              <h3>Quais são os detalhes do seu projeto? *</h3>      
+              <textarea name="detalhes" id="detalhes" ></textarea>
     <script>
       var slideIndex = 0;
       showSlides();
@@ -547,12 +598,21 @@
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 3500); // Change image every 2 seconds
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
       }
 
       function fechar() {
         document.getElementById("navi-toggle").checked = 0;
       }
+
+window.onscroll = function() {left()};
+
+function left() {
+    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+        document.getElementById("row-cards").className = "row animar-left";
+    }
+}
+
     </script>
   </body>
 </html>
