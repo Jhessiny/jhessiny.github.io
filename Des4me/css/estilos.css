@@ -1,0 +1,172 @@
+html,
+body {
+  height: 100%;
+  font-weight: normal;
+  font-size: 1em;
+  background-color: #eaf3fa;
+}
+.navbar {
+  background-color: rgba(1, 25, 34);
+  color: #fff;
+  z-index: 2;
+  width: 100%;
+}
+
+.full-page-intro {
+  background-image: url(../img/teste.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: 540px;
+  color: #fff;
+}
+
+h1 {
+  padding-top: 180px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.full-page-intro .btn {
+  border-radius: 5px;
+  background-color: rgba(241, 104, 118, 1);
+  /* border: solid #eaf3fa 1px;*/
+} 
+
+.full-page-intro .btn:hover {
+  background-color: #325281;
+  color: #fff;
+}
+
+main .container {
+  color: #1f505a;
+  text-align: center;
+}
+
+.startup {
+  display: block;
+  margin-left: 203px;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+.img-startup {
+  width: 100%;
+  height: 100%;
+}
+
+.section-light{
+  background-color: rgb(255, 255, 255);
+}
+
+.fas,
+.far {
+  font-size: 2em;
+  background-color: #bbc7ca;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  vertical-align: center;
+  box-sizing: border-box;
+  padding-top: 17px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  border: solid 0.3px #b1bcbe;
+}
+
+.item {
+  color: #1f505a;
+  text-align: center;
+}
+
+.item h4 {
+  margin-bottom: 15px;
+}
+
+.itens-lado {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mentors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.mentor-img {
+  background-image: url(../img/mulher.jpg);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.mentor {
+  text-align: center;
+  align-content: center;
+}
+
+.mentor p {
+  display: inline-block;
+  max-width: 220px;
+}
+
+.contato {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  color: white;
+}
+footer {
+  background-color: #022b3a;
+}
+
+@media (min-width: 710px) {
+  .full-page-intro {
+    background-image: url(../img/inicio.jpg);
+    height: 700px;
+  }
+  .mask-intro {
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .full-page-intro .titulo{
+    margin-top: 200px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px){
+  .sobre{
+    margin: auto;
+  }
+  .startup{
+    margin: auto;
+  }
+}
+
+@media(min-width: 995px){
+  #sobre {
+    background-image: url(../img/startupmin.jpg);
+    background-repeat: no-repeat;
+    background-size: 55%;
+  }
+
+  .sobre{
+     border: solid 10px rgba(183, 223, 237, 1);
+    border: solid 10px #4b9aaa;
+    padding: 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    margin-left: 50%;
+    margin-top: 65px;
+    color: #5B6F76;
+    text-align: center;
+    max-width: 45%;
+  }
+  .startup{
+    display: none;
+  }
+}
